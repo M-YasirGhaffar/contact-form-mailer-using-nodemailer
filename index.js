@@ -14,6 +14,10 @@ app.use(bodyParser.json());
 
 app.use(cors());
 
+app.get('/', (req, res) => {
+    res.redirect('https://github.com/M-YasirGhaffar/contact-form-mailer-using-nodemailer/tree/main#readme')
+});
+
 app.post('/send-email', (req, res) => {
     let { name, email, message, form_info } = req.body;
 
